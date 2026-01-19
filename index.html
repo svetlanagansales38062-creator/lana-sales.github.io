@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lana $ale$ — Свобода</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+      color: #4b2e83;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .marquee-container {
+      background: #6a0dad;
+      color: white;
+      padding: 8px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-weight: bold;
+    }
+    .marquee-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 22s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(106, 13, 173, 0.08);
+      border-bottom: 2px solid #c4a7e7;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #6a0dad;
+    }
+    .poem {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #f8f2ff;
+      border-radius: 12px;
+      border-left: 5px solid #9a6bd9;
+      box-shadow: 0 3px 8px rgba(106, 13, 173, 0.12);
+    }
+    .poem-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #6a0dad;
+      margin-bottom: 15px;
+    }
+    .poem-text {
+      white-space: pre-line;
+      font-size: 1.15em;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6a0dad;
+      border-top: 1px dashed #d1b8f0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Бегущая строка -->
+  <div class="marquee-container">
+    <div class="marquee-text">Автор слов: Гансалес Светлана (Lana $ale$)</div>
+  </div>
+
+  <header>
+    <h1>Свобода</h1>
+  </header>
+
+  <div class="poem">
+    <div class="poem-title">Свобода</div>
+    <div class="poem-text">
+Свобода, мне дороже денег, 
+Дороже золота, бриллиантов и вещей,
+Когда у пропасти стоишь ты на коленях, 
+И слезы капают как, воск тающих свечей.
+Когда ищешь выход, но заперта ты в клетке, 
+Бьёшь руки в кровь , рвёт душу твою на части , 
+Как рыбка пойманная в сетке, 
+Для меня выпала дама пиковой масти...
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Lana $ale$ — Все права защищены.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
